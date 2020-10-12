@@ -88,6 +88,10 @@ class Approve extends PureComponent {
 		mode: REVIEW
 	};
 
+	componentDidMount = () => {
+		this.handleFetchBasicEstimates();
+	};
+
 	componentWillUnmount = () => {
 		const { approved } = this.state;
 		const { transaction } = this.props;
@@ -205,7 +209,6 @@ class Approve extends PureComponent {
 
 	render = () => {
 		const { gasError, basicGasEstimates, mode, ready } = this.state;
-
 		const { transaction } = this.props;
 
 		return (
