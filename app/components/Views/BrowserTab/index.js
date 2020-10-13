@@ -1118,12 +1118,10 @@ export const BrowserTab = props => {
 
 		props.updateTabInfo(getMaskedUrl(siteInfo.url), props.id);
 
-		if (type !== 'start') {
-			props.addToBrowserHistory({
-				name: siteInfo.title,
-				url: getMaskedUrl(siteInfo.url)
-			});
-		}
+		props.addToBrowserHistory({
+			name: siteInfo.title,
+			url: getMaskedUrl(siteInfo.url)
+		});
 	};
 
 	/**
@@ -1246,6 +1244,7 @@ export const BrowserTab = props => {
 	 * When website finished loading
 	 */
 	const onLoadEnd = ({ nativeEvent }) => {
+		if (nativeEvent.loading) return;
 		const { current } = webviewRef;
 
 		current && current.injectJavaScript(JS_WEBVIEW_URL);
@@ -1256,7 +1255,9 @@ export const BrowserTab = props => {
 		const promise = current ? new Promise(promiseResolver) : Promise.resolve(url.current);
 
 		promise.then(info => {
-			if (info.url === nativeEvent.url) {
+			const { hostname: currentHostname } = new URL(url.current);
+			const { hostname } = new URL(nativeEvent.url);
+			if (info.url === nativeEvent.url && currentHostname === hostname) {
 				changeUrl({ ...nativeEvent, icon: info.icon }, 'end-promise');
 			}
 		});
