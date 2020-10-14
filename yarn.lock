@@ -1337,33 +1337,32 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@metamask/controllers@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@metamask/controllers/-/controllers-2.0.5.tgz#302dbae0595b269f2660253ee40c4c7f9bce069e"
-  integrity sha512-i+BjTEMy0XQFdcyXeEHmQ7xzktdNPBuw/R9QNBIllOvV4atR0JkZ9of6hi4tDFyjV40CBudqnIgS0iUVLWNGbA==
+"@metamask/controllers@file:metamask-controllers-v3.1.0.tgz":
+  version "3.1.0"
+  resolved "file:metamask-controllers-v3.1.0.tgz#e0af1ee8a3dce066d8f1322356809f6d8bb88e7b"
   dependencies:
     await-semaphore "^0.1.3"
     eth-contract-metadata "^1.11.0"
     eth-ens-namehash "^2.0.8"
-    eth-json-rpc-infura "^4.0.1"
+    eth-json-rpc-infura "^5.1.0"
     eth-keyring-controller "^5.6.1"
     eth-method-registry "1.1.0"
     eth-phishing-detect "^1.1.13"
     eth-query "^2.1.2"
-    eth-rpc-errors "^2.1.1"
+    eth-rpc-errors "^3.0.0"
     eth-sig-util "^2.3.0"
     ethereumjs-util "^6.1.0"
     ethereumjs-wallet "0.6.0"
     ethjs-query "^0.3.8"
     human-standard-collectible-abi "^1.0.2"
     human-standard-token-abi "^2.0.0"
-    isomorphic-fetch "^2.2.1"
+    isomorphic-fetch "^3.0.0"
     jsonschema "^1.2.4"
     percentile "^1.2.1"
     single-call-balance-checker-abi "^1.0.0"
     uuid "^3.3.2"
     web3 "^0.20.7"
-    web3-provider-engine "^15.0.4"
+    web3-provider-engine "^16.0.1"
 
 "@metamask/mobile-provider@1.3.0":
   version "1.3.0"
@@ -4837,7 +4836,7 @@ eth-json-rpc-errors@^2.0.0, eth-json-rpc-errors@^2.0.1, eth-json-rpc-errors@^2.0
   dependencies:
     fast-safe-stringify "^2.0.6"
 
-eth-json-rpc-filters@4.1.1, eth-json-rpc-filters@^4.1.1:
+eth-json-rpc-filters@4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/eth-json-rpc-filters/-/eth-json-rpc-filters-4.1.1.tgz#15277c66790236d85f798f4d7dc6bab99a798cd2"
   integrity sha512-GkXb2h6STznD+AmMzblwXgm1JMvjdK9PTIXG7BvIkTlXQ9g0QOxuU1iQRYHoslF9S30BYBSoLSisAYPdLggW+A==
@@ -4846,6 +4845,18 @@ eth-json-rpc-filters@4.1.1, eth-json-rpc-filters@^4.1.1:
     eth-json-rpc-middleware "^4.1.4"
     eth-query "^2.1.2"
     json-rpc-engine "^5.1.3"
+    lodash.flatmap "^4.5.0"
+    safe-event-emitter "^1.0.1"
+
+eth-json-rpc-filters@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/eth-json-rpc-filters/-/eth-json-rpc-filters-4.2.1.tgz#82204a13c99927dbf42cbb3962846650c6281f33"
+  integrity sha512-tPfohezq8mSmwa47xvq6PGzBDLZ0njWJMB1J+OPuv+n+1WkWDlf3l3tqJXpq96RxhrzK2q7wiweRS5aGIzpq4Q==
+  dependencies:
+    await-semaphore "^0.1.3"
+    eth-json-rpc-middleware "^6.0.0"
+    eth-query "^2.1.2"
+    json-rpc-engine "^5.3.0"
     lodash.flatmap "^4.5.0"
     safe-event-emitter "^1.0.1"
 
@@ -4860,15 +4871,15 @@ eth-json-rpc-infura@4.0.0:
     json-rpc-error "^2.0.0"
     tape "^4.8.0"
 
-eth-json-rpc-infura@^4.0.1:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/eth-json-rpc-infura/-/eth-json-rpc-infura-4.0.2.tgz#8af1a1a2e9a0a82aaa302bbc96fb1a4c15d69b83"
-  integrity sha512-dvgOrci9lZqpjpp0hoC3Zfedhg3aIpLFVDH0TdlKxRlkhR75hTrKTwxghDrQwE0bn3eKrC8RsN1m/JdnIWltpw==
+eth-json-rpc-infura@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/eth-json-rpc-infura/-/eth-json-rpc-infura-5.1.0.tgz#e6da7dc47402ce64c54e7018170d89433c4e8fb6"
+  integrity sha512-THzLye3PHUSGn1EXMhg6WTLW9uim7LQZKeKaeYsS9+wOBcamRiCQVGHa6D2/4P0oS0vSaxsBnU/J6qvn0MPdow==
   dependencies:
-    cross-fetch "^2.1.1"
-    eth-json-rpc-errors "^1.0.1"
-    eth-json-rpc-middleware "^4.1.4"
-    json-rpc-engine "^5.1.3"
+    eth-json-rpc-middleware "^6.0.0"
+    eth-rpc-errors "^3.0.0"
+    json-rpc-engine "^5.3.0"
+    node-fetch "^2.6.0"
 
 eth-json-rpc-middleware@4.3.0:
   version "4.3.0"
@@ -4890,7 +4901,7 @@ eth-json-rpc-middleware@4.3.0:
     pify "^3.0.0"
     safe-event-emitter "^1.0.1"
 
-eth-json-rpc-middleware@^4.0.0, eth-json-rpc-middleware@^4.1.4, eth-json-rpc-middleware@^4.1.5:
+eth-json-rpc-middleware@^4.0.0, eth-json-rpc-middleware@^4.1.4:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/eth-json-rpc-middleware/-/eth-json-rpc-middleware-4.4.1.tgz#07d3dd0724c24a8d31e4a172ee96271da71b4228"
   integrity sha512-yoSuRgEYYGFdVeZg3poWOwAlRI+MoBIltmOB86MtpoZjvLbou9EB/qWMOWSmH2ryCWLW97VYY6NWsmWm3OAA7A==
@@ -4907,6 +4918,23 @@ eth-json-rpc-middleware@^4.0.0, eth-json-rpc-middleware@^4.1.4, eth-json-rpc-mid
     fetch-ponyfill "^4.0.0"
     json-rpc-engine "^5.1.3"
     json-stable-stringify "^1.0.1"
+    pify "^3.0.0"
+    safe-event-emitter "^1.0.1"
+
+eth-json-rpc-middleware@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/eth-json-rpc-middleware/-/eth-json-rpc-middleware-6.0.0.tgz#4fe16928b34231a2537856f08a5ebbc3d0c31175"
+  integrity sha512-qqBfLU2Uq1Ou15Wox1s+NX05S9OcAEL4JZ04VZox2NS0U+RtCMjSxzXhLFWekdShUPZ+P8ax3zCO2xcPrp6XJQ==
+  dependencies:
+    btoa "^1.2.1"
+    clone "^2.1.1"
+    eth-query "^2.1.2"
+    eth-rpc-errors "^3.0.0"
+    eth-sig-util "^1.4.2"
+    ethereumjs-util "^5.1.2"
+    json-rpc-engine "^5.3.0"
+    json-stable-stringify "^1.0.1"
+    node-fetch "^2.6.1"
     pify "^3.0.0"
     safe-event-emitter "^1.0.1"
 
@@ -4947,10 +4975,10 @@ eth-query@^2.1.0, eth-query@^2.1.2:
     json-rpc-random-id "^1.0.0"
     xtend "^4.0.1"
 
-eth-rpc-errors@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/eth-rpc-errors/-/eth-rpc-errors-2.1.1.tgz#00a7d6c8a9c864a8ab7d0356be20964e5bee4b13"
-  integrity sha512-MY3zAa5ZF8hvgQu1HOF9agaK5GgigBRGpTJ8H0oVlE0NqMu13CW6syyjLXdeIDCGQTbUeHliU1z9dVmvMKx1Tg==
+eth-rpc-errors@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/eth-rpc-errors/-/eth-rpc-errors-3.0.0.tgz#d7b22653c70dbf9defd4ef490fd08fe70608ca10"
+  integrity sha512-iPPNHPrLwUlR9xCSYm7HHQjWBasor3+KZfRvwEWxMz3ca0yqnlBeJrnyphkGIXZ4J7AMAaOLmwy4AWhnxOiLxg==
   dependencies:
     fast-safe-stringify "^2.0.6"
 
@@ -7037,13 +7065,21 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
-isomorphic-fetch@^2.1.1, isomorphic-fetch@^2.2.1:
+isomorphic-fetch@^2.1.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   integrity sha1-YRrhrPFPXoH3KVB0coGf6XM1WKk=
   dependencies:
     node-fetch "^1.0.1"
     whatwg-fetch ">=0.10.0"
+
+isomorphic-fetch@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-3.0.0.tgz#0267b005049046d2421207215d45d6a262b8b8b4"
+  integrity sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA==
+  dependencies:
+    node-fetch "^2.6.1"
+    whatwg-fetch "^3.4.1"
 
 isomorphic-ws@^4.0.1:
   version "4.0.1"
@@ -7681,6 +7717,14 @@ json-rpc-engine@^5.0.0, json-rpc-engine@^5.1.3:
     async "^2.0.1"
     eth-json-rpc-errors "^2.0.1"
     promise-to-callback "^1.0.0"
+    safe-event-emitter "^1.0.1"
+
+json-rpc-engine@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/json-rpc-engine/-/json-rpc-engine-5.3.0.tgz#7dc7291766b28766ebda33eb6d3f4c6301c44ff4"
+  integrity sha512-+diJ9s8rxB+fbJhT7ZEf8r8spaLRignLd8jTgQ/h5JSGppAHGtNMZtCoabipCaleR1B3GTGxbXBOqhaJSGmPGQ==
+  dependencies:
+    eth-rpc-errors "^3.0.0"
     safe-event-emitter "^1.0.1"
 
 json-rpc-error@^2.0.0:
@@ -9112,6 +9156,11 @@ node-fetch@^2.0.0-alpha.8, node-fetch@^2.2.0, node-fetch@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
+
+node-fetch@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
+  integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
 node-int64@^0.4.0:
   version "0.4.0"
@@ -12772,20 +12821,20 @@ weak@^1.0.0:
     bindings "^1.2.1"
     nan "^2.0.5"
 
-web3-provider-engine@^15.0.4:
-  version "15.0.12"
-  resolved "https://registry.yarnpkg.com/web3-provider-engine/-/web3-provider-engine-15.0.12.tgz#24d7f2f6fb6de856824c7306291018c4fc543ac3"
-  integrity sha512-/OfhQalKPND1iB5ggvGuYF0+SIb2Qj5OFTrT2VrZWP79UhMTdP7T+L2FtblmRdCeOetoAzZHdBaIwLOZsmIX+w==
+web3-provider-engine@^16.0.1:
+  version "16.0.1"
+  resolved "https://registry.yarnpkg.com/web3-provider-engine/-/web3-provider-engine-16.0.1.tgz#2600a39ede364cdc0a1fc773bf40a94f2177e605"
+  integrity sha512-/Eglt2aocXMBiDj7Se/lyZnNDaHBaoJlaUfbP5HkLJQC/HlGbR+3/W+dINirlJDhh7b54DzgykqY7ksaU5QgTg==
   dependencies:
     async "^2.5.0"
     backoff "^2.5.0"
     clone "^2.0.0"
     cross-fetch "^2.1.0"
     eth-block-tracker "^4.4.2"
-    eth-json-rpc-errors "^2.0.2"
-    eth-json-rpc-filters "^4.1.1"
-    eth-json-rpc-infura "^4.0.1"
-    eth-json-rpc-middleware "^4.1.5"
+    eth-json-rpc-filters "^4.2.1"
+    eth-json-rpc-infura "^5.1.0"
+    eth-json-rpc-middleware "^6.0.0"
+    eth-rpc-errors "^3.0.0"
     eth-sig-util "^1.4.2"
     ethereumjs-block "^1.2.2"
     ethereumjs-tx "^1.2.0"
@@ -12832,6 +12881,11 @@ whatwg-fetch@>=0.10.0, whatwg-fetch@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
   integrity sha512-9GSJUgz1D4MfyKU7KRqwOjXCXTqWdFNvEr7eUBYchQiVc744mqK/MzXPNR2WsPkmkOa4ywfg8C2n8h+13Bey1Q==
+
+whatwg-fetch@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.4.1.tgz#e5f871572d6879663fa5674c8f833f15a8425ab3"
+  integrity sha512-sofZVzE1wKwO+EYPbWfiwzaKovWiZXf4coEzjGP9b2GBVgQRLQUZ2QcuPpQExGDAW5GItpEm6Tl4OU5mywnAoQ==
 
 whatwg-mimetype@^2.2.0, whatwg-mimetype@^2.3.0:
   version "2.3.0"
